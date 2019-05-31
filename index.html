@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link href="css/mui.picker.css" rel="stylesheet" />
+    <link href="css/mui.poppicker.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/common.css">
+
+</head>
+
+<body>
+    <div class="score-wrap"> <a href="" class="look">已提交查看排名>></a></div>
+    <div class="submit-box" id='app'>
+        <div class="choose-type">
+            <div class="type-title">
+                    <div class="title-list current">
+                            <div class="currentblue"></div>教师
+                        </div>
+                        <div class="title-list ">
+                                <div class="currentblue"></div>事业单位
+                            </div>
+                            <div class="title-list ">
+                                    <div class="currentblue"></div>公务员
+                                </div>
+            </div>
+            <div class="ago-score">往年进面分数>></div>
+        </div>
+        <div class="mui-slider">
+            <div class="submit-mes mui-slider-group">
+                <div class="mui-slider-item">
+                    <div class="isshowinputbox">
+                        <div class="sub-wrap-item">
+                            <img src="./img/user@2x.png" alt="">
+                            <input id='username' type="text" placeholder="真实姓名">
+                        </div>
+                        <div class="sub-wrap-item">
+                            <img src="./img/phone@2x.png" alt="">
+                            <input id='userphone' type="number" placeholder="手机号码" maxlength="11">
+                        </div>
+                        <div class="sub-wrap-item">
+                            <img src="./img/code@2x.png" alt="">
+                            <input id='code_input' type="number" placeholder="验证码" maxlength="8">
+                        </div>
+                        <div class="sub-wrap-item sendcode-btn" id='code-btn'>
+                            获取验证码
+                        </div>
+                    </div>
+                   <div class="render-content">
+                    <div class="sub-wrap-item area">
+                        <img src="./img/address@2x.png" alt="">
+                        <div class="placeholder">报考地区</div>
+                        <div class="select"> ▼</div>
+                    </div>
+                    <div class="sub-wrap-item">
+                        <img src="./img/testtype@2x.png" alt="">
+                        <div class="placeholder">考试类型</div>
+                        <div class="select"> ▼</div>
+                    </div>
+                    <div class="sub-wrap-item" onclick="zzhtest(this)">
+                        <img src="./img/subject@2x.png" alt="">
+                        <div class="placeholder">报考科目/学段</div>
+                        <div class="select"> ▼</div>
+                    </div>
+                    <div class="sub-wrap-item">
+                        <img src="./img/score@2x.png" alt="">
+                        <input type="number" placeholder="笔试分数">
+                    </div>
+                </div>
+                    <div class="clearfex"></div>
+                    <div class="submit-btn" id='submit-btn'>
+                        提交查询排名 >
+                    </div>
+                </div>
+
+                <div class="mui-slider-item">
+                    <div class="isshowinputbox">
+                        <div class="sub-wrap-item">
+                            <img src="./img/user@2x.png" alt="">
+                            <input id='username' type="text" placeholder="真实姓名">
+                        </div>
+                        <div class="sub-wrap-item">
+                            <img src="./img/phone@2x.png" alt="">
+                            <input id='userphone' type="number" placeholder="手机号码" maxlength=11>
+                        </div>
+                        <div class="sub-wrap-item">
+                            <img src="./img/code@2x.png" alt="">
+                            <input id='code_input' type="number" placeholder="验证码" maxlength="8">
+                        </div>
+                        <div class="sub-wrap-item sendcode-btn" id='code-btn'>
+                            获取验证码
+                        </div>
+                    </div>
+
+                    <div class="render-content">
+                    <div class="sub-wrap-item area">
+                        <img src="./img/address@2x.png" alt="">
+                        <div class="placeholder">报考地区</div>
+                        <div class="select"> ▼</div>
+                    </div>
+                    <div class="sub-wrap-item">
+                        <img src="./img/danwei@2x.png" alt="">
+                        <div class="placeholder">单位选择</div>
+                        <div class="select"> ▼</div>
+                    </div>
+                    <div class="sub-wrap-item">
+                        <img src="./img/zhiwei@2x.png" alt="">
+                        <div class="placeholder">职位代码选择</div>
+                        <div class="select"> ▼</div>
+                    </div>
+                    <div class="sub-wrap-item">
+                        <img src="./img/score@2x.png" alt="">
+                        <input type="number" placeholder="笔试分数">
+                    </div>
+                </div>
+                    <div class="clearfex"></div>
+                    <div class="submit-btn" id='submit-btn'>
+                        提交查询排名 >
+                    </div>
+                </div>
+
+                <div class="mui-slider-item">
+                        <div class="isshowinputbox">
+                            <div class="sub-wrap-item">
+                                <img src="./img/user@2x.png" alt="">
+                                <input id='username' type="text" placeholder="真实姓名">
+                            </div>
+                            <div class="sub-wrap-item">
+                                <img src="./img/phone@2x.png" alt="">
+                                <input id='userphone' type="number" placeholder="手机号码" maxlength=11>
+                            </div>
+                            <div class="sub-wrap-item">
+                                <img src="./img/code@2x.png" alt="">
+                                <input id='code_input' type="number" placeholder="验证码" maxlength="8">
+                            </div>
+                            <div class="sub-wrap-item sendcode-btn" id='code-btn'>
+                                获取验证码
+                            </div>
+                        </div>
+
+                        <div class="render-content">
+                        <div class="sub-wrap-item area">
+                            <img src="./img/address@2x.png" alt="">
+                            <div class="placeholder">报考地区</div>
+                            <div class="select"> ▼</div>
+                        </div>
+                        <div class="sub-wrap-item">
+                            <img src="./img/danwei@2x.png" alt="">
+                            <div class="placeholder">单位选择</div>
+                            <div class="select"> ▼</div>
+                        </div>
+                        <div class="sub-wrap-item">
+                            <img src="./img/zhiwei@2x.png" alt="">
+                            <div class="placeholder">职位代码选择</div>
+                            <div class="select"> ▼</div>
+                        </div>
+                        <div class="sub-wrap-item">
+                            <img src="./img/score@2x.png" alt="">
+                            <input type="number" placeholder="笔试分数">
+                        </div>
+                    </div>
+                    
+                        <div class="clearfex"></div>
+                        <div class="submit-btn" id='submit-btn'>
+                            提交查询排名 >
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 生产环境版本，优化了尺寸和速度 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src='./js/mui.min.js'></script>
+    <script src="js/mui.picker.js"></script>
+    <script src="js/mui.poppicker.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="http://qzonestyle.gtimg.cn/qzone/qzact/common/share/share.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script id="tpl-render" type="text/html">
+        <!-- <div class="submit-box" id='app'> -->
+    <div class="choose-type">
+        <div class="type-title">
+            <%for(var i=0;i< list.length;i++){%>
+            <%if(i==0){%>
+            <div class="title-list current">
+                <div class="currentblue"></div><%= list[i].text%>
+            </div>
+            <% }else{%>
+            <div class="title-list">
+                <div class="currentblue"></div><%= list[i].text%>
+            </div>
+            <% }%>
+            <%}%>
+                </div>
+                <div class="ago-score">往年进面分数>></div>
+            </div>
+
+            <div class="mui-slider">
+                <div class="submit-mes mui-slider-group">
+                        <%for(var i=0;i< list.length;i++){%>
+                    <div class="mui-slider-item">
+                        <div class="isshowinputbox">
+                            <div class="sub-wrap-item">
+                                <img src="./img/user@2x.png" alt="">
+                                <input id='username' type="text" placeholder="真实姓名">
+                            </div>
+                            <div class="sub-wrap-item">
+                                <img src="./img/phone@2x.png" alt="">
+                                <input id='userphone' type="number" placeholder="手机号码" maxlength="11">
+                            </div>
+                            <div class="sub-wrap-item">
+                                <img src="./img/code@2x.png" alt="">
+                                <input id='code_input' type="number" placeholder="验证码" maxlength="8">
+                            </div>
+                            <div class="sub-wrap-item sendcode-btn" id='code-btn'>
+                                获取验证码
+                            </div>
+                        </div>
+                       <div class="render-content">
+                            <div class="sub-wrap-item area">
+                                    <img src="./img/phone@2x.png" alt="">
+                                    <div class="placeholder">地区选择</div>
+                                    <div class="select"> ▼</div>
+                                </div>
+                            <%for(var j=0;j< list[i].children.length;j++){%>
+                                
+                                    <div class="sub-wrap-item">
+                                            <img src="./img/testtype@2x.png" alt="">
+                                            <div class="placeholder"><%= list[i].children[j].text%></div>
+                                            <div class="select"> ▼</div>
+                                        </div>
+                                       
+                                <%}%>
+                                <div class="sub-wrap-item">
+                                        <img src="./img/score@2x.png" alt="">
+                                        <input type="number" placeholder="笔试分数">
+                                    </div>
+                        <!-- <div class="sub-wrap-item">
+                            <img src="./img/testtype@2x.png" alt="">
+                            <div class="placeholder">考试类型</div>
+                            <div class="select"> ▼</div>
+                        </div>
+                        <div class="sub-wrap-item" >
+                            <img src="./img/subject@2x.png" alt="">
+                            <div class="placeholder">报考科目/学段</div>
+                            <div class="select"> ▼</div>
+                        </div>
+                        <div class="sub-wrap-item">
+                            <img src="./img/score@2x.png" alt="">
+                            <input type="number" placeholder="笔试分数">
+                        </div> -->
+                        
+                    </div>
+                        <div class="clearfex"></div>
+                        <div class="submit-btn" id='submit-btn'>
+                            提交查询排名 >
+                        </div>
+                    </div>
+                    <%}%>
+                         <!-- item  -->
+                </div> 
+              
+            </div>
+
+        <!-- </div> -->
+
+    </script>
+
+    <script>
+        (function (window) {
+            var username = document.getElementById('username');
+            var userphone = document.getElementById('userphone');
+            var code_btn = document.getElementById('code-btn');
+            var code_input = document.getElementById('code_input');
+            var submit_btn = document.getElementById('submit-btn');
+            var init = (function () { //初始化的时候根据token判断用户是否已经登录过，如果登录就不显示登录部分
+                var getLocalstorage = window.localStorage.getItem('token');
+                var isShowLoginBtn = document.querySelectorAll('.isshowinputbox');
+
+                if (getLocalstorage != 'null') {
+                    for (let index = 0; index < isShowLoginBtn.length; index++) {
+
+                        isShowLoginBtn[index].style.display = 'none';
+
+                    }
+                }
+            })()
+
+            fetch(baseurl + '/applets/dictionary/assort').then(function (res) { //教师，事业单位，公务员等标题的遍历添加
+                return res.json()
+            }).then((res) => {
+                if (res.success) {
+
+                    var data = {
+                        list: res.data.children
+                    };
+                   
+                    // var html = template('tpl-render', data);
+                    // document.getElementById('app').innerHTML = html;
+                  
+                    //获得slider插件对象
+                    var gallery = mui('.mui-slider');
+                    gallery.slider({
+                        interval: 0 //自动轮播周期，若为0则不自动播放，默认为0；
+                    });
+
+                    document.querySelector('.mui-slider').addEventListener('slide', function (event) {
+                        console.log(event.detail.slideNumber);
+                        var current = document.querySelectorAll('.title-list');
+                        for (var i = 0; i < current.length; i++) {
+                            current[i].classList.remove('current');
+                        }
+                        current[event.detail.slideNumber].classList.add('current')
+                    });
+
+                    document.getElementsByClassName('area')[0].onclick = function () { //地区选择
+                var self = this;
+                fetch(baseurl + '/applets/dictionary/area').then(function (res) {
+                    return res.json()
+                }).then((res) => {
+                    if (res.success) {
+                        var picker = new mui.PopPicker({
+                            layer: 3
+                        });
+                        picker.setData(res.data.children);
+
+                        picker.show(function (selectItems) {
+                            self.querySelector('.placeholder').innerHTML = selectItems[0].text +
+                                selectItems[1].text + selectItems[2].text
+
+                        })
+                    } else {
+                        return Promise.reject(res)
+                    }
+
+                }).catch((err) => {
+                    console.log(err);
+
+                })
+            }
+            var timer; var index = 6;
+            code_btn.onclick = function () {
+                if (username.value != '' && userphone.value != '' && (/^1(3|4|5|6|7|8)\d{9}$/
+                                .test(userphone.value))) {
+                                    this.innerText = index+'s后重新发送';
+               
+               this.style.backgroundColor='#ccc';
+               clearInterval(timer);
+               if(index==6){
+                   index-=1;
+                fetch(baseurl + '/applets/phone/send/sms?phone=' + userphone.value +
+                               '&name=' + username
+                               .value).then(function (res) {
+                               return res.json()
+                           }).then((res) => {
+                               console.log(res);
+
+                           }).catch((err) => {
+
+                           })
+               }
+                timer = setInterval(function () {
+                  
+                  
+                   this.innerText = index + 's后重新发送';
+                   index--;
+                   if (index == 0) {
+                       index=6;
+                    this.innerText = "获取验证码";
+                   
+                    this.style.backgroundColor='#89BFFF';
+                       clearInterval(timer);            
+                       
+                   }
+                 
+               }.bind(this), 1000)
+                                } else {
+                            mui.toast('用户名或手机号未输入或错误')
+                        }
+
+            }
+
+            code_input.onblur = function () {
+                console.log(666);
+
+                if (this.value.length > 0) {
+                    let postForToken = {
+                        name: username.value,
+                        phone: userphone.value,
+                        sms: code_input.value
+                    }
+                    fetch(baseurl + '/applets/phone/check/sms', { //通过手机号码、短信验证码进行验证，验证成功返回 token
+
+                        method: 'post',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(postForToken)
+                    }).then(function (res) {
+                        return res.json()
+                    }).then((res) => {
+                        if (res.success) {
+                            window.localStorage.setItem('token', res.data)
+                        } else {
+                            return Promise.reject(res)
+                        }
+
+
+                    }).catch((err) => {
+                        mui.toast(err.msg)
+                    })
+                }
+            }
+
+            submit_btn.onclick = function () {
+               
+            }
+
+                } else {
+                    return Promise.reject(res)
+                }
+
+            }).catch((err) => {
+                console.log(err);
+
+            })
+
+         
+
+
+        })(window)
+    </script>
+    <!-- <script src="./js/shareconfig.js"></script> -->
+</body>
+
+</html>

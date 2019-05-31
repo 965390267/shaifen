@@ -1,0 +1,59 @@
+html,body,div,p,h1,h2,h3,h4,h5,ul,li{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+   user-select: none;
+}
+.mui-slider .mui-slider-group .mui-slider-item img{
+    width: 12px;
+}
+ input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text]{
+    line-height:normal;
+    width: 80%;
+    height:auto;
+    margin-bottom: 0px;
+    padding: 0px 0px;
+    -webkit-user-select: text;
+    border: none;
+    border-radius: 0px;
+    outline: 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+}
+.mui-slider-item{
+    padding: 0 6px;
+}
+input::-webkit-input-placeholder {
+    font-size: 12px!important;
+    color: #ccc!important;
+}
+.mui-poppicker-header .mui-btn {
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+.mui-poppicker-btn-cancel{
+    border: 1px solid #89BFFF;
+    color: #89BFFF;
+}
+.mui-poppicker-btn-ok{
+    background-color: #89BFFF;
+    border: none;
+}
+.mui-pciker-rule-ft{
+   
+    border-top: solid 1px  #89BFFF;
+    border-bottom: solid 1px  #89BFFF;
+}
+.mui-picker{
+    background: #fff;
+}
+.mui-toast-container {
+    bottom: 20% !important;/*离布局底部的距离*/
+    }
+.mui-toast-message{
+    background-color: rgba(0,0,0,.6);
+    color: #fff;
+}
+* { touch-action: pan-y; } 
