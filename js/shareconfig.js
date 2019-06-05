@@ -23,7 +23,7 @@ fetch('http://pay.91yunshi.com/payment/sign/signUrl?url=' + myurl).then(function
             title: '晒分测进面',
             summary: "分享晒出你的分数查看历年最高分吧！",
             pic: 'http://store.91yunshi.com/storage/guagua/44*44*34fe1a998ca98d116a903d4727d878b4.jpg',
-            url: 'http://pay.91yunshi.com/search/index.html',
+            url: 'http://pay.91yunshi.com/shaifen/index.html',
             WXconfig: {
                 swapTitleInWX: true,
                 appId: 'wxc40a603712f455e0',
@@ -53,7 +53,7 @@ fetch('http://pay.91yunshi.com/payment/sign/signUrl?url=' + myurl).then(function
 var shareConfig = {
     title: '晒分测进面',
     desc: "分享晒出你的分数查看历年最高分吧！", // 分享描述
-    link: 'http://pay.91yunshi.com/search/index.html',
+    link: 'http://pay.91yunshi.com/shaifen/index.html',
     imgUrl: 'http://store.91yunshi.com/storage/guagua/44*44*34fe1a998ca98d116a903d4727d878b4.jpg', // 分享图标
 
 };

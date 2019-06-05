@@ -1,114 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="renderer" content="webkit">
-    <title>Document</title>
+    <title>晒分测进面</title>
     <link rel="stylesheet" href="./css/common.css">
     <style>
-    body{
-        background-image: url('../img/scorerank@2x.png') ;
-        background-repeat: no-repeat;
-    background-size: 100%;
-    }
-    .rank-title{
-        text-align: center;
-        font-size: 16px;
-        color: #fff;
-        padding-top: 20px;
-        font-weight: normal;
-    }
-    .current-rank-wrap{
-        width: 90%;
-        margin: 0 auto;
-        margin-top:20px;
-        border-radius: 4px;
-        overflow: hidden;
-    }
-    .current-rank{
-        display: flex;
-        display: -webkit-flex;
-        justify-content: space-around;
-        flex-direction: row;   
-    }
-    .current-rank li{
-        flex: 1;
-        list-style: none;
-        color: #FF8989;
-        font-size: 12px;
-        text-align: center;
-        border-left: 1px solid #fff;
-        border-bottom: 1px solid #fff;
-        background-color: #D8E7FC;
-        padding: 4px 0;
-    }
-    .rank-mid-title{
-        padding:25px;
-        font-weight: normal;
-        font-size: 14px;
-        color: #EDEDED;
-        text-align: center;
-    }
-    .rank-mid-title em{
-        color: #FF8989;
-        font-weight: normal;
-        font-style: normal;
-    }
+        body {
+            background-image: url('./img/scorerank@2x.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
 
-    .total-rank-wrap{
-        width: 90%;
-        margin: 0 auto;
-        margin-top:20px;
-        border-radius: 4px;
-        overflow: hidden;
-    }
-    .total-rank{
-        display: flex;
-        display: -webkit-flex;
-        justify-content: space-around;
-        flex-direction: row;   
-    }
-   
-    .total-rank li{
-        flex: 1;
-        list-style: none;
-        color: #666;
-        font-size: 12px;
-        text-align: center;
-        border-left: 1px solid #fff;
-        border-bottom: 1px solid #fff;
-        background-color: #fff;
-        padding: 4px 0;
-        margin-top: 1px;
-    }
-    .total-rank.head li{
-        color: #fff;
-        background-color: #89BFFF;
-    }
-    .banner{
-        height: 120px;
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 50px;
-        border-radius: 10px;
-    }
+        .rank-title {
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+            padding-top: 20px;
+            font-weight: normal;
+        }
+
+        .current-rank-wrap {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 20px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .current-rank {
+            display: flex;
+            display: -webkit-flex;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+
+        .current-rank li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            list-style: none;
+            color: #FF8989;
+            font-size: 12px;
+            text-align: center;
+            border-left: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            background-color: #D8E7FC;
+            padding: 4px 0;
+        }
+
+        .rank-mid-title {
+            padding: 25px;
+            font-weight: normal;
+            font-size: 14px;
+            color: #EDEDED;
+            text-align: center;
+        }
+
+        .rank-mid-title em {
+            color: #FF8989;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .total-rank-wrap {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 20px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .total-rank {
+            display: flex;
+            display: -webkit-flex;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+
+        .total-rank li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            list-style: none;
+            color: #666;
+            font-size: 12px;
+            text-align: center;
+            border-left: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            background-color: #fff;
+            padding: 4px 0;
+            margin-top: 1px;
+        }
+
+        .total-rank.head li {
+            color: #fff;
+            background-color: #89BFFF;
+        }
+
+        .banner {
+            height: 120px;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 50px;
+            border-radius: 10px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
     </style>
 </head>
+
 <body>
-  <h3 class="rank-title">当前排名</h3>
-  <div  class="current-rank-wrap">
-      <ul class="current-rank">
-      <li>姓名</li>
-      <li>考试类型</li>
-      <li>时间</li>
-      <li>区域</li>
-      <li>学段/科目</li>
-      <li>分数</li>
-      <li>排名</li>
-    </ul>
-      <ul class="current-rank">
+    <h3 class="rank-title">当前排名</h3>
+    <div class="current-rank-wrap">
+        <ul class="current-rank">
+            <li>姓名</li>
+            <li>考试类型</li>
+            <li>时间</li>
+            <li>区域</li>
+            <li>学段/科目</li>
+            <li>分数</li>
+            <li>排名</li>
+        </ul>
+        <ul class="current-rank">
             <li>甄欣琨</li>
             <li>fdgf</li>
             <li>dsfd</li>
@@ -116,29 +135,144 @@
             <li>3425</li>
             <li>53445</li>
             <li>53445</li>
-      </ul>
-  </div>
-  <h4 class="rank-mid-title">已有 <em>14385</em> 名考生参与晒分</h4>
-  <div  class="total-rank-wrap">
+        </ul>
+    </div>
+    <h4 class="rank-mid-title">已有 <em>14385</em> 名考生参与晒分</h4>
+    <div class="total-rank-wrap">
         <ul class="total-rank head">
-        <li>姓名</li>
-        <li>考试类型</li>
-        <li>时间</li>
-        <li>区域</li>
-        <li>学段/科目</li>
-        <li>分数</li>
-     
-      </ul>
+            <li>姓名</li>
+            <li>考试类型</li>
+            <li>时间</li>
+            <li>区域</li>
+            <li>学段/科目</li>
+            <li>分数</li>
+
+        </ul>
         <ul class="total-rank">
-              <li>甄欣琨</li>
-              <li>fdgf</li>
-              <li>dsfd</li>
-              <li>435</li>
-              <li>3425</li>
-              <li>53445</li>
-          
+            <li>甄欣琨</li>
+            <li>fdgf</li>
+            <li>dsfd</li>
+            <li>435</li>
+            <li>3425</li>
+            <li>53445</li>
+
         </ul>
     </div>
     <div class="banner"></div>
 </body>
+<script id="tpl-render" type="text/html">
+   <li><%=name%></li>
+   <li><%=type1%></li>
+   <li><%=year%></li>
+   <li><%=city%><%=district%></li>
+   <li><%=type2%>-<%=type3%></li>
+   <li><%=score%></li>
+   <li><%=ranking%></li>
+        
+</script>
+<script id="tpl-total-render" type="text/html">
+    <%for(var j=0;j< list.length;j++){%>
+    <li><%=list[j].name%></li>
+    <li><%=list[j].type1%></li>
+    <li><%=list[j].year%></li>
+    <li><%=list[j].city%><%=list[j].district%></li>
+    <li><%=list[j].type2%>-<%=list[j].type3%></li>
+    <li><%=list[j].score%></li>
+    
+       <%}%>  
+ </script>
+ <script src="js/crypto-js.js"></script>
+    <script src="js/md5.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/template-web.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://qzonestyle.gtimg.cn/qzone/qzact/common/share/share.js"></script>
+<script>
+    axios(baseurl + '/applets/showScore/ranking', {
+        method: 'get',
+        headers: {
+            'Authorization': localStorage.getItem('token'),
+            'Content-Type': 'application/json;charset=utf-8'
+        }
+    }).then((res) => {
+        var res = res.data;
+        if (res.success) {
+
+            var data = res.data
+            var html = template('tpl-render', data);
+            //   console.log(html);
+
+            document.querySelectorAll('.current-rank')[1].innerHTML = html;
+        } else {
+            return Promise.reject(res)
+        }
+    }).catch(err=>{
+        alert(err.msg)
+    })
+    axios(baseurl + '/applets/showScore/rankingTop?page='+1+'&size='+5, {
+        method: 'get',
+        headers: {
+            'Authorization': localStorage.getItem('token'),
+            'Content-Type': 'application/json;charset=utf-8'
+        }
+    }).then((res) => {
+        var res = res.data
+        if (res.success) {
+
+            var data = {
+                list: res.data
+            }
+
+            var html = template('tpl-total-render', data);
+
+
+            document.querySelectorAll('.total-rank')[1].innerHTML = html;
+        } else {
+            return Promise.reject(res)
+        }
+    }).catch(err=>{
+        alert(err.msg)
+    })
+    axios(baseurl + '/applets/showScore/peopleNum', {
+        method: 'get',
+        headers: {
+            'Authorization': localStorage.getItem('token'),
+            'Content-Type': 'application/json;charset=utf-8'
+        }
+    }).then((res) => {
+        var res = res.data
+        if (res.success) {
+            console.log(res);
+
+            //  var data ={
+            //      list:res.data
+            //  }
+
+            //   var html = template('tpl-total-render', data);
+            //    console.log(html);
+
+            document.querySelector('.rank-mid-title em').innerHTML = res.data;
+        } else {
+            return Promise.reject(res)
+        }
+    }).catch(err=>{
+        alert(err.msg)
+    })
+
+    axios(baseurl + '/applets/ad/getAdRandom').//获取排名信息 TOP5，排名信息为数组，
+    then((res) => {
+        var res=res.data;
+        if (res.success) {
+         
+            document.getElementsByClassName('banner')[0].style.cssText += "background-image:url(" + res.data.image + ")";
+        } else {
+            return Promise.reject(res)
+        }
+    }).catch(err=>{
+        alert(err.msg)
+    })
+</script>
+<script src="./js/shareconfig.js"></script>
+
 </html>

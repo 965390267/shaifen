@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="renderer" content="webkit">
-    <title>Document</title>
+    <title>晒分测进面</title>
     <link rel="stylesheet" href="./css/mui.min.css">
     <link href="css/mui.picker.css" rel="stylesheet" />
     <link href="css/mui.poppicker.css" rel="stylesheet" />
@@ -16,21 +16,21 @@
 </head>
 
 <body>
-    <div class="score-wrap"> <a href="" class="look">已提交查看排名>></a></div>
+    <div class="score-wrap"> <a onclick="lookrank(this)" class="look">已提交查看排名>></a></div>
     <div class="submit-box" id='app'>
         <div class="choose-type">
             <div class="type-title">
-                <div class="title-list current">
+                <div class="title-list current" onclick="switchtitle(0)">
                     <div class="currentblue"></div>教师
                 </div>
-                <div class="title-list ">
+                <div class="title-list " onclick="switchtitle(1)">
                     <div class="currentblue"></div>事业单位
                 </div>
-                <div class="title-list ">
+                <div class="title-list " onclick="switchtitle(2)">
                     <div class="currentblue"></div>公务员
                 </div>
             </div>
-            <div class="ago-score">往年进面分数>></div>
+            <div class="ago-score"><a href="./rank.html"> 往年进面分数>></a></div>
         </div>
         <div class="mui-slider">
             <div class="submit-mes mui-slider-group">
@@ -46,14 +46,14 @@
                         </div>
                         <div class="sub-wrap-item">
                             <img src="./img/code@2x.png" alt="">
-                            <input id='code_input' type="number" placeholder="验证码" maxlength="8"  onblur="getcode(this)">
+                            <input id='code_input' type="number" placeholder="验证码" maxlength="8" onblur="getcode(this)">
                         </div>
-                        <div class="sub-wrap-item sendcode-btn" id='code-btn'>
+                        <div class="sub-wrap-item sendcode-btn" onclick="sendcode(this)">
                             获取验证码
                         </div>
                     </div>
                     <div class="render-content">
-                        <div class="sub-wrap-item ignore area">
+                        <div class="sub-wrap-item ignore area" onclick="choosearea(this)">
                             <img src="./img/address@2x.png" alt="">
                             <div class="placeholder">报考地区</div>
                             <div class="select"> ▼</div>
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                     <div class="clearfex"></div>
-                    <div class="submit-btn" id='submit-btn'>
+                    <div class="submit-btn" id='submit-btn' onclick="submit(this)">
                         提交查询排名 >
                     </div>
                 </div>
@@ -87,40 +87,39 @@
                         </div>
                         <div class="sub-wrap-item">
                             <img src="./img/phone@2x.png" alt="">
-                            <input id='userphone' type="number" placeholder="手机号码" maxlength=11>
+                            <input id='userphone' type="number" placeholder="手机号码" maxlength="11">
                         </div>
                         <div class="sub-wrap-item">
                             <img src="./img/code@2x.png" alt="">
-                            <input id='code_input' type="number" placeholder="验证码" maxlength="8">
+                            <input id='code_input' type="number" placeholder="验证码" maxlength="8" onblur="getcode(this)">
                         </div>
-                        <div class="sub-wrap-item sendcode-btn" id='code-btn'>
+                        <div class="sub-wrap-item sendcode-btn" onclick="sendcode(this)">
                             获取验证码
                         </div>
                     </div>
-
                     <div class="render-content">
-                        <div class="sub-wrap-item area">
+                        <div class="sub-wrap-item ignore area" onclick="choosearea(this)">
                             <img src="./img/address@2x.png" alt="">
                             <div class="placeholder">报考地区</div>
                             <div class="select"> ▼</div>
                         </div>
-                        <div class="sub-wrap-item">
-                            <img src="./img/danwei@2x.png" alt="">
-                            <div class="placeholder">单位选择</div>
+                        <div class="sub-wrap-item " onclick="choose(this)">
+                            <img src="./img/testtype@2x.png" alt="">
+                            <div class="placeholder">考试类型</div>
                             <div class="select"> ▼</div>
                         </div>
-                        <div class="sub-wrap-item">
-                            <img src="./img/zhiwei@2x.png" alt="">
-                            <div class="placeholder">职位代码选择</div>
+                        <div class="sub-wrap-item" onclick="choose(this)">
+                            <img src="./img/subject@2x.png" alt="">
+                            <div class="placeholder">报考科目/学段</div>
                             <div class="select"> ▼</div>
                         </div>
-                        <div class="sub-wrap-item">
+                        <div class="sub-wrap-item ignore">
                             <img src="./img/score@2x.png" alt="">
-                            <input type="number" placeholder="笔试分数">
+                            <input type="number" placeholder="笔试分数" onfocus="score(this)" onblur="score(this)">
                         </div>
                     </div>
                     <div class="clearfex"></div>
-                    <div class="submit-btn" id='submit-btn'>
+                    <div class="submit-btn" id='submit-btn' onclick="submit(this)">
                         提交查询排名 >
                     </div>
                 </div>
@@ -133,41 +132,39 @@
                         </div>
                         <div class="sub-wrap-item">
                             <img src="./img/phone@2x.png" alt="">
-                            <input id='userphone' type="number" placeholder="手机号码" maxlength=11>
+                            <input id='userphone' type="number" placeholder="手机号码" maxlength="11">
                         </div>
                         <div class="sub-wrap-item">
                             <img src="./img/code@2x.png" alt="">
-                            <input id='code_input' type="number" placeholder="验证码" maxlength="8">
+                            <input id='code_input' type="number" placeholder="验证码" maxlength="8" onblur="getcode(this)">
                         </div>
-                        <div class="sub-wrap-item sendcode-btn" id='code-btn'>
+                        <div class="sub-wrap-item sendcode-btn" onclick="sendcode(this)">
                             获取验证码
                         </div>
                     </div>
-
                     <div class="render-content">
-                        <div class="sub-wrap-item area">
+                        <div class="sub-wrap-item ignore area" onclick="choosearea(this)">
                             <img src="./img/address@2x.png" alt="">
                             <div class="placeholder">报考地区</div>
                             <div class="select"> ▼</div>
                         </div>
-                        <div class="sub-wrap-item">
-                            <img src="./img/danwei@2x.png" alt="">
-                            <div class="placeholder">单位选择</div>
+                        <div class="sub-wrap-item " onclick="choose(this)">
+                            <img src="./img/testtype@2x.png" alt="">
+                            <div class="placeholder">考试类型</div>
                             <div class="select"> ▼</div>
                         </div>
-                        <div class="sub-wrap-item">
-                            <img src="./img/zhiwei@2x.png" alt="">
-                            <div class="placeholder">职位代码选择</div>
+                        <div class="sub-wrap-item" onclick="choose(this)">
+                            <img src="./img/subject@2x.png" alt="">
+                            <div class="placeholder">报考科目/学段</div>
                             <div class="select"> ▼</div>
                         </div>
-                        <div class="sub-wrap-item">
+                        <div class="sub-wrap-item ignore">
                             <img src="./img/score@2x.png" alt="">
-                            <input type="number" placeholder="笔试分数">
+                            <input type="number" placeholder="笔试分数" onfocus="score(this)" onblur="score(this)">
                         </div>
                     </div>
-
                     <div class="clearfex"></div>
-                    <div class="submit-btn" id='submit-btn'>
+                    <div class="submit-btn" id='submit-btn' onclick="submit(this)">
                         提交查询排名 >
                     </div>
                 </div>
@@ -177,10 +174,14 @@
 
     </div>
     <!-- 生产环境版本，优化了尺寸和速度 -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
+    <script src="js/crypto-js.js"></script>
+    <script src="js/md5.min.js"></script>
     <script src='./js/mui.min.js'></script>
     <script src="js/mui.picker.js"></script>
     <script src="js/mui.poppicker.js"></script>
+    <script src="js/axios.min.js"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="http://qzonestyle.gtimg.cn/qzone/qzact/common/share/share.js"></script>
     <script src="./js/common.js"></script>
@@ -276,17 +277,19 @@
     </script>
 
     <script>
+ 
+    
+
         (function (window) {
-            var username = document.getElementById('username');
-            var userphone = document.getElementById('userphone');
-            var code_btn = document.getElementById('code-btn');
-            var code_input = document.getElementById('code_input');
-            var submit_btn = document.getElementById('submit-btn');
+            // var username = document.getElementById('username');
+            // var userphone = document.getElementById('userphone');
+            var SUB = {},
+                current = 0;//轮播的切换的当前页索引
             var init = (function () { //初始化的时候根据token判断用户是否已经登录过，如果登录就不显示登录部分
                 var getLocalstorage = window.localStorage.getItem('token');
                 var isShowLoginBtn = document.querySelectorAll('.isshowinputbox');
 
-                if (getLocalstorage != 'null' && getLocalstorage=='') {
+                if (getLocalstorage != 'null' && getLocalstorage) {
                     for (let index = 0; index < isShowLoginBtn.length; index++) {
 
                         isShowLoginBtn[index].style.display = 'none';
@@ -295,11 +298,21 @@
                 }
             })()
 
-            fetch(baseurl + '/applets/dictionary/assort').then(function (res) { //教师，事业单位，公务员等标题的遍历添加
-                return res.json()
-            }).then((res) => {
-                if (res.success) {
 
+
+
+            function lookrank(self) {
+                if (window.localStorage.getItem('token') != 'null' && window.localStorage.getItem('token')) {
+                    window.location.href = './rank.html'
+                } else {
+                    mui.toast('您还未提交晒分信息')
+                }
+            }
+            window.lookrank = lookrank;
+            axios.get(baseurl + '/applets/dictionary/assort').then((res) => {
+                var res = res.data;
+                if (res.success) {
+                   
                     var data = {
                         list: res.data.children
                     };
@@ -307,17 +320,13 @@
                     for (let i = 0; i < data.list.length; i++) {
                         var listitem = document.getElementsByClassName('render-content')[i]
                             .querySelectorAll('.sub-wrap-item');
-                          var k=0;
-                        for (let j = 0; j < listitem.length; j++) {   
-                          
-                                                     
-                          if (listitem[j].classList[1] != 'ignore') {
-                             
-                              
-                            var sdata=JSON.stringify(res.data.children[i].children[k]); 
-                            listitem[j].setAttribute('data',sdata);
-                            k++;
-                          }                                                        
+                        var k = 0;
+                        for (let j = 0; j < listitem.length; j++) {
+                            if (listitem[j].classList[1] != 'ignore') {
+                                var sdata = JSON.stringify(res.data.children[i].children[k]);
+                                listitem[j].setAttribute('data', sdata);
+                                k++;
+                            }
                         }
                     }
 
@@ -330,9 +339,15 @@
                     gallery.slider({
                         interval: 0 //自动轮播周期，若为0则不自动播放，默认为0；
                     });
+                 function switchtitle(index){
+                     console.log(index);
+                     
+                    gallery.slider().gotoItem(index);
 
+                 }
+                 window.switchtitle=switchtitle;
                     document.querySelector('.mui-slider').addEventListener('slide', function (event) {
-                      
+                        current = event.detail.slideNumber;
                         var current = document.querySelectorAll('.title-list');
                         for (var i = 0; i < current.length; i++) {
                             current[i].classList.remove('current');
@@ -340,73 +355,129 @@
                         current[event.detail.slideNumber].classList.add('current')
                     });
 
-               function choose(self){
-         
-            var getdata=JSON.parse(self.getAttribute('data'));
-    
-     var row_length=getdata.children.length;
-   
-    function getMaxFloor (treeData){
-                let floor = 0
-                let v = this
-                let max = 0
-                function each (data, floor) {
-                    data.forEach(e => {
-                        e.floor = floor
-                        if (floor > max) {
-                            max = floor
-                        }
-                        if (e.children.length > 0) {
-                            each(e.children, floor + 1)
-                        }
-                    })
-                }
-                each(treeData,1)
-                return max
-            }
-console.log(getMaxFloor(getdata));
+                    function choose(self) {
 
-            
-    //  var index=0;
-    //  function tree(obj){ 
-    //     console.log(obj);
-      
-    //      if(obj.children && obj.children.length>0){
-            
-           
-    //          for (let j = 0; j < obj.children.length; j++) {  
-                    
-    //             tree(obj.children[j])     
-                     
-    //          }   
-    //          nodes.push(obj.children )
-    //          index++;   
-    //      }
-         
-    //  }
-    //  tree(getdata)
-     console.log( getMaxFloor(getdata));
-     
-    //  console.log( getdata);
-            var picker = new mui.PopPicker({
-                                    layer: index
+                        var getdata = JSON.parse(self.getAttribute('data'));
+
+
+                        var num = 0;
+
+                        function recursion(obj, k) { //广度优先搜索算法计算json数据的深度
+                            num = Math.max(num, k);
+
+                            if (obj.children)
+                                obj.children.forEach(function (v, i) {
+                                    recursion(v, k + 1);
                                 });
-                                picker.setData(getdata.children);
+                        }
+                        recursion(getdata, 1);
 
-                                picker.show(function (selectItems) {
-                                    self.innerHTML =
-                                        selectItems[0].text +
-                                        selectItems[1].text + selectItems[2].text
+                        var picker = new mui.PopPicker({
+                            layer: num - 1
+                        });
+                        picker.setData(getdata.children);
 
-                                })
-               }
-               window.choose=choose;
-                    document.getElementsByClassName('area')[0].onclick = function () { //地区选择
-            
-                        var self = this;
-                        fetch(baseurl + '/applets/dictionary/area').then(function (res) {
-                            return res.json()
+                        picker.show(function (selectItems) { //根据json数据的深度得到选择的列表行数                    
+                            var str = '';
+                            for (var index = 0; index < num - 1; index++) {
+                                // if(index==num-2)str+=selectItems[index].text;
+                                str += selectItems[index].text + '/';
+
+                            }
+                            console.log(selectItems);
+                            console.log(getdata);
+
+                            self.getElementsByClassName('placeholder')[0].innerHTML = str;
+                            inputcomplate({
+                                eventNode: getdata.text,
+                                nodeValue: str
+                            })
+
+
+
+                        })
+                    }
+                    window.choose = choose;
+
+                    function score(self) {
+                        // SUB.push({eventNode:self,nodeValue: self.value})
+                        inputcomplate({
+                            eventNode: 'score',
+                            nodeValue: self.value
+                        }, self)
+
+
+                    }
+                    window.score = score;
+           var knock=false;
+                    function inputcomplate(subArrItem, self) {
+                        if (subArrItem.eventNode != '') {
+                            SUB[subArrItem.eventNode] = subArrItem.eventNode;
+                        }
+                        var index = 0;
+
+                        for (var atr in SUB) {
+                            index++;
+                            if (atr != subArrItem.nodeValue && atr != '') {
+                                SUB[subArrItem.eventNode] = subArrItem.nodeValue;
+                            }
+                        }
+                        console.log(SUB);
+
+                        if (index >= 3) {
+                            knock=true;
+
+                            if (self) self.parentNode.parentNode.parentNode.getElementsByClassName(
+                                'submit-btn')[0].style.backgroundColor = "#FF6262";
+
+                            console.log('over');
+
+                        }
+                    }
+
+                    function submit(self) {
+if(!knock){
+    return mui.toast('信息输入不完整')
+}
+
+                        var postForToken = {
+                            assort: document.querySelectorAll('.title-list')[current].textContent.trim(),
+                            province: SUB['地区'].split('/')[0],
+                            city: SUB['地区'].split('/')[1],
+                            district: SUB['地区'].split('/')[2],
+                            type1: SUB['考试类型'].split('/')[0],
+                            type2: SUB['学段-学科'].split('/')[0],
+                            type3: SUB['学段-学科'].split('/')[1],
+                            score: SUB['score'],
+                        }
+                        console.log(postForToken);
+                        axios(baseurl + '/applets/showScore/submit', {
+                            method: 'post',
+                            headers: {
+                                'Authorization': localStorage.getItem('token'),
+                                'Content-Type': 'application/json;charset=utf-8'
+                            },
+                            data: postForToken
                         }).then((res) => {
+                            var res = res.data;
+                            if (res.success) {
+                                window.location.href = './rank.html';
+                            } else {
+                                return Promise.reject(res)
+                            }
+
+                        }).catch((err) => {
+                            mui.toast(err.msg)
+                        })
+                    }
+                    window.submit = submit;
+
+                    function choosearea(self) { //地区选择
+                        //    console.log(e);
+
+
+                        axios(baseurl + '/applets/dictionary/area').then((res) => {
+                            var res = res.data;
                             if (res.success) {
                                 var picker = new mui.PopPicker({
                                     layer: 3
@@ -414,11 +485,25 @@ console.log(getMaxFloor(getdata));
                                 picker.setData(res.data.children);
 
                                 picker.show(function (selectItems) {
-                                    self.querySelector('.placeholder').innerHTML =
-                                        selectItems[0].text +
-                                        selectItems[1].text + selectItems[2].text
+                                    var str = '';
+                                    for (var index = 0; index < selectItems
+                                        .length; index++) {
+                                        // if(index==num-2)str+=selectItems[index].text;
+                                        str += selectItems[index].text + '/';
+
+                                    }
+                                    self.querySelector('.placeholder').innerHTML = str;
+                                    // SUB.push({eventNode:self.querySelector('.placeholder'),nodeValue: self.querySelector('.placeholder').innerHTML})
+                                    inputcomplate({
+                                        eventNode: '地区',
+                                        nodeValue: str
+                                    })
+
 
                                 })
+
+
+
                             } else {
                                 return Promise.reject(res)
                             }
@@ -428,91 +513,105 @@ console.log(getMaxFloor(getdata));
 
                         })
                     }
+                    window.choosearea = choosearea;
                     var timer;
-                    var index = 6;
-                    code_btn.onclick = function () {
+                    var index = 60;
+
+                    function sendcode(self) {
+                        var username = self.parentNode.querySelectorAll('.sub-wrap-item')[0]
+                            .querySelector('input');
+                        var userphone = self.parentNode.querySelectorAll('.sub-wrap-item')[1]
+                            .querySelector('input');
                         if (username.value != '' && userphone.value != '' && (/^1(3|4|5|6|7|8)\d{9}$/
-                                .test(userphone.value))) {
-                            this.innerText = index + 's后重新发送';
+                            .test(userphone.value))) {
+                            self.innerText = index + 's后重新发送';
 
-                            this.style.backgroundColor = '#ccc';
+                            self.style.backgroundColor = '#ccc';
                             clearInterval(timer);
-                            if (index == 6) {
+                            if (index == 60) {
                                 index -= 1;
-                                fetch(baseurl + '/applets/phone/send/sms?phone=' + userphone.value +
+                                axios(baseurl + '/applets/phone/send/sms?phone=' + userphone.value +
                                     '&name=' + username
-                                    .value).then(function (res) {
-                                    return res.json()
-                                }).then((res) => {
-                                    console.log(res);
-
-                                }).catch((err) => {
-
-                                })
+                                        .value).then((res) => {
+                                            var res = res.data;
+                                            console.log(res);
+                                            mui.toast(res.msg)
+                                        }).catch((err) => {
+                                            mui.toast(err.msg)
+                                        })
                             }
                             timer = setInterval(function () {
 
 
-                                this.innerText = index + 's后重新发送';
+                                self.innerText = index + 's后重新发送';
                                 index--;
                                 if (index == 0) {
-                                    index = 6;
-                                    this.innerText = "获取验证码";
+                                    index = 60;
+                                    self.innerText = "获取验证码";
 
-                                    this.style.backgroundColor = '#89BFFF';
+                                    self.style.backgroundColor = '#89BFFF';
                                     clearInterval(timer);
 
                                 }
 
-                            }.bind(this), 1000)
+                            }, 1000)
                         } else {
                             mui.toast('用户名或手机号未输入或错误')
                         }
 
                     }
+                    window.sendcode = sendcode;
 
-                function getcode(self) {
-
-console.log(self);
+                    function getcode(self) {
+                        var username = self.parentNode.parentNode.querySelectorAll('.sub-wrap-item')[0]
+                            .querySelector('input');
+                        var userphone = self.parentNode.parentNode.querySelectorAll('.sub-wrap-item')[1]
+                            .querySelector('input');
+                        
 
                         if (self.value.length > 0) {
                             let postForToken = {
                                 name: username.value,
                                 phone: userphone.value,
-                                sms: code_input.value
+                                sms: self.value
                             }
+                            console.log(postForToken);
                             // var formData = new FormData();
                             //   formData.append('name', username.value);
                             //   formData.append('phone', userphone.value);
                             //   formData.append('sms',code_input.value);
-                            fetch(baseurl +
-                            '/applets/phone/check/sms', { //通过手机号码、短信验证码进行验证，验证成功返回 token
+                            axios(baseurl +
+                                '/applets/phone/check/sms', { //通过手机号码、短信验证码进行验证，验证成功返回 token
 
-                                method: 'post',
-                                headers: {
-                                    'Accept': 'application/json', 
-                                     'Content-Type': 'application/json' 
-                                },
-                                body: postForToken
-                            }).then(function (res) {
-                                return res.json()
-                            }).then((res) => {
-                                if (res.success) {
-                                    window.localStorage.setItem('token', res.data)
-                                } else {
-                                    return Promise.reject(res)
-                                }
+                                    method: 'post',
+                                    headers: {
+
+                                        'Content-Type': 'application/json;charset=utf-8'
+                                    },
+                                    data: postForToken
+                                }).then((res) => {
+                                    console.log(res);
+                                    
+                                    var res = res.data;
+                                    if (res.success) {
+                                        mui.toast(res.msg)
+                                        window.localStorage.setItem('token', res.data)
+                                    } else {
+                                        return Promise.reject(res)
+                                    }
 
 
-                            }).catch((err) => {
-                                mui.toast(err.msg)
-                            })
+                                }).catch((err) => {
+                                    console.log(err);
+                                    
+                                    mui.toast(err.msg)
+                                })
                         }
                     }
-                 window.getcode=getcode;
-                    submit_btn.onclick = function () {
+                    window.getcode = getcode;
+                    // submit_btn.onclick = function () {
 
-                    }
+                    // }
 
                 } else {
                     return Promise.reject(res)
@@ -528,7 +627,7 @@ console.log(self);
 
         })(window)
     </script>
-    <!-- <script src="./js/shareconfig.js"></script> -->
+    <script src="./js/shareconfig.js"></script>
 </body>
 
 </html>

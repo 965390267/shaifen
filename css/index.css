@@ -12,7 +12,7 @@ body{
     flex-direction: column-reverse;
     background-image: url('../img/main-bg@2x.png') ;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 .submit-box{
   /* height: 45%; */
@@ -96,7 +96,7 @@ body{
 }
 .sub-wrap-item  input::placeholder{
     font-size: 12px;
-    color: #ccc!important;
+    color: #ccc;
 }
 .sub-wrap-item img{
     width: 12px;
